@@ -30,3 +30,9 @@
       }
     });
   });
+
+
+  // Button
+  $(".playlist-button").click(function() {
+    $(".playlist").toggle(); /* toggle deprecated */ console.log("Test");
+});

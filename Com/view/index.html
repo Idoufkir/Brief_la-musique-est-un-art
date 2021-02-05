@@ -1,70 +1,66 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../asset/css/style.css" rel="stylesheet">
-    <title>la musique est un art</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../asset/css/style.css" rel="stylesheet">
+  <title>la musique est un art</title>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
+
 <body>
-    <!-- <header>
+  <!-- <header>
         <ul>
           <li class="current menu"><a href="index.html">Home</a></li>
           <li class="menu"><a href="music.html">Music</a></li>
         </ul>
       </header> -->
+
+  <div class="slide" id="slide2">
+
+
+    <div id="title">
+      <a href="index.html"><img id="logo" src="../asset/img/logo2.png"></a>
+      <h2>YouPlayList </h2>
+      <h1>Music For everyone</h1>
+      <h2>Add Your Music</h2>
+    </div>
+    <div class="artiste-div justify-content-center">
+      <input type="text" name="" id="artistename" placeholder="Enter Artiste name" />
+      <br /><br />
+      <input type="text" name="" id="albumname" placeholder="Enter Album name" />
+      <br /><br />
+      <input type="text" name="" id="imgArtist" placeholder="Enter Path img" />
+      <br /><br />
+      <button id="addArtiste" type="submit">Add..</button>
+    </div>
+    <br /><br />
+
+      <div id="showArtiste"></div>
+
     
-      <div class="slide" id="slide2">
-        
-      
-        <div id="title">
-          <img id="logo" src="../asset/img/logo2.png">
-          <h2>YouPlayList </h2>
-          <h1>Music For everyone</h1>
-          <h2>Every moment</h2>
-        </div>
-        <div class="artiste-div">
-          <input
-            type="text"
-            name=""
-            id="artistename"
-            placeholder="Enter Artiste name"
-          />
-          <br /><br />
-          <input
-          type="text"
-          name=""
-          id="albumname"
-          placeholder="Enter Album name"
-        />
-        <br /><br />
-          <input
-          type="text"
-          name=""
-          id="imgArtist"
-          placeholder="Enter Path img"
-        />
-          <br /><br />
-          <button id="addArtiste" type="submit">Add..</button>
-        </div>
-        <br /><br />
-        <div id="showArtiste"></div>
-        <div id="artistList"></div>
-      </div>
+  </div>
 
 
 
 
-      <footer>
-        <p class="copy">IDOUFKIR Mustafa &copy; <span id="year"></span></p>
-        <a href="https://github.com/Idoufkir" target="_blank">
-			<img class="logo2" src="../asset/img/github.png" title="GitHub" ></a>
-			
-		<a href="https://gitlab.com/Idoufkir" target="_blank">
-				<img class="logo2" src="../asset/img/gitlab.png" title="GitLab" ></a>
+  <footer>
+    <p class="copy">IDOUFKIR Mustafa &copy; <span id="year"></span></p>
+    <a href="https://github.com/Idoufkir" target="_blank">
+      <img class="logo2" src="../asset/img/github.png" title="GitHub"></a>
 
-      </footer>
-      <script src="../script/script.js"></script>
+    <a href="https://gitlab.com/Idoufkir" target="_blank">
+      <img class="logo2" src="../asset/img/gitlab.png" title="GitLab"></a>
+
+  </footer>
+  <script src="../script/script.js"></script>
 </body>
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
@@ -83,4 +79,5 @@
 </script>
 
 <script src="../script/backend/BackendArtiste.js"></script>
+
 </html>

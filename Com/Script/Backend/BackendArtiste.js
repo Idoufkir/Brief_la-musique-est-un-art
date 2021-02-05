@@ -6,11 +6,14 @@ const path = window.require("path");
 
 //specfying the file path
 let npathNameArtiste = path.join(__dirname, "/../Data/Artistes.txt");
+let npathNameMusic = path.join(__dirname, "/../Data/Musiques.txt");
 
 //calling DOM element
 var showArtiste = document.getElementById("showArtiste");
-
 var btnAddArtiste = document.getElementById('addArtiste');
+
+var showMusic = document.getElementById("showMusic");
+
 
 var nameArtiste = document.getElementById('artistename');
 var albumeArtiste = document.getElementById('albumname');
@@ -21,14 +24,15 @@ btnAddArtiste.addEventListener("click", () => {
   var albumArtisteValue = albumeArtiste.value;
   var nameArtisteValue = nameArtiste.value;
   var pathImgValue = pathImg.value;
-   fs.appendFileSync(npathNameArtiste,  "\n"+nameArtisteValue+ " " + albumArtisteValue+ " " + pathImgValue, "UTF-8", {flags: "a+"}); 
-   location.reload();
+
+  fs.appendFileSync(npathNameArtiste, "\n" + nameArtisteValue + " " + albumArtisteValue + " " + pathImgValue, "UTF-8", { flags: "a+" });
+  location.reload();
 
 });
 
 //read data from the artiste file
 window.addEventListener("load", () => {
-// console.log(npathNameArtiste);
+  // console.log(npathNameArtiste);
 
   fs.readFileSync(npathNameArtiste, "utf8")
     .split(/\r?\n/)
@@ -42,11 +46,11 @@ window.addEventListener("load", () => {
         //   stringArray.push(" ");
         // }
 
-        
+
       }
 
 
-       console.log(stringArray[0] + " " + stringArray[1] + " " + stringArray[2]);
+      // console.log(stringArray[0] + " " + stringArray[1] + " " + stringArray[2]);
 
 
 
@@ -59,13 +63,24 @@ window.addEventListener("load", () => {
       var uri = document.createElement("img");
       uri.src = "imgArtist";
       uri.setAttribute('src', stringArray[2]);
-      
+
 
       var name = document.createElement("h3");
       name.className = "details";
 
       var titlemusic = document.createElement("h3");
       titlemusic.className = "details";
+      
+
+      var btnPlaylist = document.createElement('button');
+      btnPlaylist.className = "playlist-button"; 
+      btnPlaylist.onclick = () => { 
+
+        //console.log(stringArray[0]);
+        localStorage.setItem("ArtistName", stringArray[0]);
+        //console.log(localStorage.getItem("ArtistName"));
+        window.location.href = "music.html"
+       } 
 
       var name, titlemusic, uri;
 
@@ -77,9 +92,16 @@ window.addEventListener("load", () => {
       container.appendChild(uri);
       card1.appendChild(name);
       card1.appendChild(titlemusic);
+      card1.appendChild(btnPlaylist);
 
       showArtiste.appendChild(card1);
 
 
     });
+
 });
+
+
+function ToMusicPage(){
+  console.log('salut');
+}

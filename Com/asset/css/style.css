@@ -222,3 +222,13 @@ footer p {
   line-height: 30px;
   font-weight: 400;
 }
+
+
+.hrefArtiste{
+  text-decoration: none;
+  color: #7C1CAC;
+}
+.playlist-button{
+  width: 80px;
+  height: 30px;
+}
