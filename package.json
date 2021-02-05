@@ -1,0 +1,41 @@
+{
+  "name": "la-musique-est-un-art",
+  "version": "1.0.0",
+  "description": "Création une application desktop utilisant Electron Js pour simuler la plateforme Spotify.",
+  "main": "Com/app.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Idoufkir/Brief_la-musique-est-un-art.git"
+  },
+  "author": "M.IDOUFKIR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Idoufkir/Brief_la-musique-est-un-art/issues"
+  },
+  "homepage": "https://github.com/Idoufkir/Brief_la-musique-est-un-art#readme",
+  "devDependencies": {
+    "electron": "^11.2.0",
+    "electron-builder": "^22.9.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "@types/jquery": "^3.5.5",
+    "electron-reloader": "^1.1.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "line-reader": "^0.4.0"
+  }
+}

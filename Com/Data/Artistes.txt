@@ -1,0 +1,3 @@
+name1 Artiste1 ../asset/img/1.png
+name2 Artiste2 ../asset/img/1.png
+name3 Artiste3 ../asset/img/1.png
