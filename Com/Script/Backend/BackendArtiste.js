@@ -10,7 +10,23 @@ let npathNameArtiste = path.join(__dirname, "/../Data/Artistes.txt");
 //calling DOM element
 var showArtiste = document.getElementById("showArtiste");
 
-//read data from the contact file
+var btnAddArtiste = document.getElementById('addArtiste');
+
+var nameArtiste = document.getElementById('artistename');
+var albumeArtiste = document.getElementById('albumname');
+var pathImg = document.getElementById('imgArtist');
+
+// -------------------  btnAddArtist  ------------------- //
+btnAddArtiste.addEventListener("click", () => {
+  var albumArtisteValue = albumeArtiste.value;
+  var nameArtisteValue = nameArtiste.value;
+  var pathImgValue = pathImg.value;
+   fs.appendFileSync(npathNameArtiste,  "\n"+nameArtisteValue+ " " + albumArtisteValue+ " " + pathImgValue, "UTF-8", {flags: "a+"}); 
+   location.reload();
+
+});
+
+//read data from the artiste file
 window.addEventListener("load", () => {
 // console.log(npathNameArtiste);
 
@@ -21,7 +37,7 @@ window.addEventListener("load", () => {
       var stringArray = new Array();
       for (var i = 0; i < line.length; i++) {
         stringArray.push(line[i]);
-        //console.log(line[i]);
+        console.log(line[i]);
         // if (i != line.length - 1) {
         //   stringArray.push(" ");
         // }

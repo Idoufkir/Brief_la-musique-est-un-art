@@ -1,3 +1,4 @@
-name1 Artiste1 ../asset/img/1.png
-name2 Artiste2 ../asset/img/1.png
-name3 Artiste3 ../asset/img/1.png
+Art_name1 Album1 ../asset/img/1.png
+Art_name2 Album2 ../asset/img/1.png
+Art_name3 Album3 ../asset/img/1.png
+Test test test
