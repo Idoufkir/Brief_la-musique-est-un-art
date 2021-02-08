@@ -6,13 +6,13 @@ const path = window.require("path");
 
 //specfying the file path
 let npathNameArtiste = path.join(__dirname, "/../Data/Artistes.txt");
-let npathNameMusic = path.join(__dirname, "/../Data/Musiques.txt");
+
 
 //calling DOM element
 var showArtiste = document.getElementById("showArtiste");
 var btnAddArtiste = document.getElementById('addArtiste');
 
-var showMusic = document.getElementById("showMusic");
+
 
 
 var nameArtiste = document.getElementById('artistename');
